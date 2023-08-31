@@ -1,112 +1,42 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
+[data-wf] {outline: 2px solid gray;
+   position: relative; z-index: 1;}
+[data-wf]::before {
+   position: absolute; z-index: 8675309;
+   top: 0; bottom: 0; right: 0; left: 0;
+   background:
+      linear-gradient(to top right,
+         transparent calc(50% - 1px), gray calc(50% - 1px),
+         gray calc(50% + 1px), transparent calc(50% + 1px)),
+      linear-gradient(to bottom right,
+         transparent calc(50% - 1px), gray calc(50% - 1px),
+         gray calc(50% + 1px), transparent calc(50% + 1px)),
+      #FFF9;
+      content: attr(data-wf);
+      font: bold 2em Jubilat, Georgia, serif;
+      color: gray;
+      display: flex; justify-content: center; align-items: center;
+}
 
 .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* display: grid;
-    grid-template-columns: 3fr 2fr 5fr;
-    grid-template-rows: 25% auto 25% ; */
-    background-color: #2196F3;
-    /* column-gap: 10px;
-    row-gap: 10px;; */
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-            flex-direction: row;
-    /* flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: normal;
-    align-content: normal; */
- }
-  
-  /* .grid-item:nth-child(1) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-  }
-  
-  .grid-item:nth-child(2) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 2;
-  }
-  
-  .grid-item:nth-child(3) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 3;
-  } */
+   display: grid;
+   grid-template-columns: 30% 70%;
+   grid-template-rows: 100%;
+}
 
- /* .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
- } */
+main {
+   grid-column: 2/3;
+   grid-row: 1/2;
+}
 
- .hero-image {
-    /* order: 1; */
+section {
+   grid-column: 1/2;
+   grid-row: 1/2;
+}
 
- }
+.hero-image {
+   width: 300px;
+}
 
-[data-wf] {outline: 2px solid gray;
-    position: relative; z-index: 1;}
- [data-wf]::before {
-    position: absolute; z-index: 8675309;
-    top: 0; bottom: 0; right: 0; left: 0;
-    background:
-       linear-gradient(to top right,
-          transparent calc(50% - 1px), gray calc(50% - 1px),
-          gray calc(50% + 1px), transparent calc(50% + 1px)),
-       linear-gradient(to bottom right,
-          transparent calc(50% - 1px), gray calc(50% - 1px),
-          gray calc(50% + 1px), transparent calc(50% + 1px)),
-       #FFF9;
-       content: attr(data-wf);
-       font: bold 2em Jubilat, Georgia, serif;
-       color: gray;
-       display: flex; justify-content: center; align-items: center;
- }
-
- .heading {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-flex: 3;
-        -ms-flex-positive: 3;
-            flex-grow: 3;
-    background-color: aqua;
-    /* order: 2;
-    align-self: flex-end; */
-    padding: 0 3%;
-    border-right: 1px solid white;
-
- }
-
- .education .degree_outline{
-    flex: 1;
-    justify-content: flex-end;
- }
-
- .education .degree{
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start
- }
-
- div {
-    padding: 1%;
- }
+.degree-pair {
+   display: flex;
+}
