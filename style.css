@@ -1,4 +1,4 @@
-[data-wf] {outline: 2px solid gray;
+/* [data-wf] {outline: 2px solid gray;
    position: relative; z-index: 1;}
 [data-wf]::before {
    position: absolute; z-index: 8675309;
@@ -15,7 +15,7 @@
       font: bold 2em Jubilat, Georgia, serif;
       color: gray;
       display: flex; justify-content: center; align-items: center;
-}
+} */
 
 .container {
    display: grid;
